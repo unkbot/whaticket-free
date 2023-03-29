@@ -3,12 +3,12 @@ import makeWASocket, {
   DisconnectReason,
   fetchLatestBaileysVersion,
   makeInMemoryStore,
-  MessageRetryMap,
   WASocket
 } from "@adiwajshing/baileys";
 
 import { Boom } from "@hapi/boom";
 import MAIN_LOGGER from "@adiwajshing/baileys/lib/Utils/logger";
+import NodeCache from "node-cache";
 import Whatsapp from "../models/Whatsapp";
 import { logger } from "../utils/logger";
 import AppError from "../errors/AppError";
@@ -19,7 +19,7 @@ import DeleteBaileysService from "../services/BaileysServices/DeleteBaileysServi
 import { useMultiFileAuthState } from "../helpers/useMultiFileAuthState";
 import BaileysSessions from "../models/BaileysSessions";
 
-const msgRetryCounterMap: MessageRetryMap = {};
+const msgRetryCounterCache = new NodeCache();
 
 const loggerBaileys = MAIN_LOGGER.child({});
 loggerBaileys.level = "silent";
@@ -93,7 +93,7 @@ export const initWbot = async (whatsapp: Whatsapp): Promise<Session> => {
           printQRInTerminal: false,
           auth: state as AuthenticationState,
           version,
-          msgRetryCounterMap,
+          msgRetryCounterCache,
           getMessage: async key => {
             if (store) {
               const msg = await store.loadMessage(key.remoteJid!, key.id!);
