@@ -1,4 +1,4 @@
-import { WAMessage } from "@adiwajshing/baileys";
+import { WAMessage } from "@whiskeysockets/baileys";
 import AppError from "../../errors/AppError";
 import GetTicketWbot from "../../helpers/GetTicketWbot";
 import Message from "../../models/Message";

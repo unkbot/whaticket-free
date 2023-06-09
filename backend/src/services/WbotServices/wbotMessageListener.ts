@@ -15,7 +15,7 @@ import {
   getContentType,
   extractMessageContent,
   WAMessageStubType
-} from "@adiwajshing/baileys";
+} from "@whiskeysockets/baileys";
 
 import Contact from "../../models/Contact";
 import Ticket from "../../models/Ticket";

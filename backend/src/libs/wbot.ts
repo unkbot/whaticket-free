@@ -4,10 +4,10 @@ import makeWASocket, {
   fetchLatestBaileysVersion,
   makeInMemoryStore,
   WASocket
-} from "@adiwajshing/baileys";
+} from "@whiskeysockets/baileys";
 
 import { Boom } from "@hapi/boom";
-import MAIN_LOGGER from "@adiwajshing/baileys/lib/Utils/logger";
+import MAIN_LOGGER from "@whiskeysockets/baileys/lib/Utils/logger";
 import NodeCache from "node-cache";
 import Whatsapp from "../models/Whatsapp";
 import { logger } from "../utils/logger";

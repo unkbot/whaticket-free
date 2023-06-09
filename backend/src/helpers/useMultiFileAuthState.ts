@@ -5,7 +5,7 @@ import {
   SignalDataTypeMap,
   initAuthCreds,
   BufferJSON
-} from "@adiwajshing/baileys";
+} from "@whiskeysockets/baileys";
 import Whatsapp from "../models/Whatsapp";
 import BaileysSessions from "../models/BaileysSessions";
 

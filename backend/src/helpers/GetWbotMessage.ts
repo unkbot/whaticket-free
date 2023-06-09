@@ -1,4 +1,4 @@
-import { proto } from "@adiwajshing/baileys";
+import { proto } from "@whiskeysockets/baileys";
 import Ticket from "../models/Ticket";
 import AppError from "../errors/AppError";
 import GetMessageService from "../services/MessageServices/GetMessagesService";

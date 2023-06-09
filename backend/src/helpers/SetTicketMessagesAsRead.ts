@@ -1,4 +1,4 @@
-import {} from "@adiwajshing/baileys";
+import {} from "@whiskeysockets/baileys";
 import { getIO } from "../libs/socket";
 import Message from "../models/Message";
 import Ticket from "../models/Ticket";

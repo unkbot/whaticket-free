@@ -2,8 +2,8 @@ import type {
   AuthenticationCreds,
   AuthenticationState,
   SignalDataTypeMap
-} from "@adiwajshing/baileys";
-import { BufferJSON, initAuthCreds, proto } from "@adiwajshing/baileys";
+} from "@whiskeysockets/baileys";
+import { BufferJSON, initAuthCreds, proto } from "@whiskeysockets/baileys";
 import * as Sentry from "@sentry/node";
 
 import Whatsapp from "../models/Whatsapp";
