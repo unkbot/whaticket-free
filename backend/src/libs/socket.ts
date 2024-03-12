@@ -47,7 +47,7 @@ export const initIO = (httpServer: Server): SocketIO => {
           // can join the message channel of it.
           if (
             ticket &&
-            (ticket.userId === user.id || user.profile === "admin")
+            (ticket?.userId === user.id || user.profile === "admin")
           ) {
             logger.debug(`User ${user.id} joined ticket ${ticketId} channel`);
             socket.join(ticketId);
