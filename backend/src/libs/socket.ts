@@ -96,6 +96,8 @@ export const initIO = (httpServer: Server): SocketIO => {
     socket.on("disconnect", () => {
       logger.info("Client disconnected");
     });
+    
+    socket.emit("ready");
   });
   return io;
 };

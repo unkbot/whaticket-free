@@ -113,7 +113,7 @@ const Queues = () => {
     const token = JSON.parse(localStorage.getItem("token"));
 
     const socket = openSocket(process.env.REACT_APP_BACKEND_URL, {query: {token}});
-    socket.on("connect", () => {
+    socket.on("ready", () => {
       socket.emit("joinCompany")
     });
 
